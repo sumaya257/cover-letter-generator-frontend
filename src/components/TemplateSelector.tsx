@@ -1,31 +1,37 @@
 interface Props {
-    template1: string;
-    template2: string;
-    onSelect: (template: string) => void;
-  }
-  
-  const TemplateSelector = ({ template1, template2, onSelect }: Props) => {
-    console.log('Template selected:');  // Debugging log
-    
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
-        <div className="border p-4 rounded shadow">
-          <h2 className="text-lg font-bold mb-2">Template 1</h2>
-          <p className="text-sm">{template1}</p>
-          <button onClick={() => onSelect(template1)} className="mt-4 bg-green-500 text-white py-1 px-3 rounded">
-            Select
-          </button>
-        </div>
-        <div className="border p-4 rounded shadow">
-          <h2 className="text-lg font-bold mb-2">Template 2</h2>
-          <p className="text-sm">{template2}</p>
-          <button onClick={() => onSelect(template2)} className="mt-4 bg-green-500 text-white py-1 px-3 rounded">
-            Select
-          </button>
-        </div>
+  template1: string;
+  template2: string;
+  onSelect: (template: string) => void;
+}
+
+const TemplateSelector = ({ template1, template2, onSelect }: Props) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+      {/* Template 1 */}
+      <div className="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-all bg-white hover:bg-gray-50">
+        <h2 className="text-xl font-semibold mb-4 text-center text-purple-700">Template 1</h2>
+        <p className="text-sm text-gray-600 mb-4 text-justify">{template1}</p>
+        <button
+          onClick={() => onSelect(template1)}
+          className="w-full py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-all"
+        >
+          Select Template 1
+        </button>
       </div>
-    );
-  };
-  
-  export default TemplateSelector;
-  
+
+      {/* Template 2 */}
+      <div className="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-all bg-white hover:bg-gray-50">
+        <h2 className="text-xl font-semibold mb-4 text-center text-purple-700">Template 2</h2>
+        <p className="text-sm text-gray-600 mb-4 text-justify">{template2}</p>
+        <button
+          onClick={() => onSelect(template2)}
+          className="w-full py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-all"
+        >
+          Select Template 2
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default TemplateSelector;
