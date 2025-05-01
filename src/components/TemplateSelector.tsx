@@ -1,3 +1,6 @@
+import { useNavigate } from "react-router-dom";
+
+
 interface Props {
   template1: string;
   template2: string;
@@ -5,7 +8,9 @@ interface Props {
 }
 
 const TemplateSelector = ({ template1, template2, onSelect }: Props) => {
+  const navigate = useNavigate(); // Using useNavigate hook for navigation
   return (
+    <div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
       {/* Template 1 */}
       <div className="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-all bg-white hover:bg-gray-50">
@@ -28,6 +33,16 @@ const TemplateSelector = ({ template1, template2, onSelect }: Props) => {
           className="w-full py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-all"
         >
           Select Template 2
+        </button>
+      </div>
+    </div>
+    {/* Back Button */}
+    <div className="flex justify-center mt-6">
+        <button
+          onClick={() => navigate(-1)} // Using navigate function to go back
+          className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+        >
+          Go Back
         </button>
       </div>
     </div>
