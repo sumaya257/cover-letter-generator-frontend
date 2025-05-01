@@ -16,8 +16,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold my-8">Cover Letter Generator</h1>
+    <div className="min-h-screen  bg-gradient-to-br from-indigo-50 via-white to-indigo-100 flex flex-col items-center justify-center">
+      <h1 className="text-3xl font-bold my-8">Welcome to Our Cover Letter Generator</h1>
       {!templates && !selectedLetter && <GeneratorForm onGenerate={handleGenerate} />}
       {templates && !selectedLetter && (
         <TemplateSelector
