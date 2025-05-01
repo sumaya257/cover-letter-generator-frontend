@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# 📄 Cover Letter Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **Cover Letter Generator** is a React-based web application that helps users generate professional cover letters tailored to specific job descriptions and resumes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 📝 **Paste Job Description**: Users can input any job description they want to apply for.
+- 📄 **Paste Resume**: Users can input their existing resume content.
+- 🤖 **AI-Powered Generation**: The app uses AI to generate **two different professional cover letter templates**.
+- ✅ **Template Selection**: Users can select the preferred cover letter template.
+- 📃 **Final Output**: A final, well-formatted cover letter is displayed for the user.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🚀 Installation & Setup
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js >= 18
+- npm or yarn installed
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Steps
+
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/your-username/cover-letter-generator.git
+cd cover-letter-generator
+Install Dependencies
+npm install
+# or
+yarn install
+Run the Development Server
+npm run dev
+# or
+yarn dev
+Build for Production
+npm run build
+# or
+yarn build
+Preview Production Build
+npm run preview
+# or
+yarn preview
+🔗 Live Demo
+You can try the app live here:
+https://cover-letter-generator-frontend-production.up.railway.app/
+
+🛠 Tech Stack
+React 19
+
+Vite for lightning-fast development
+
+Tailwind CSS for styling
+
+Axios for API communication
+
+React Toastify for notifications
+
+JSPDF for generating downloadable PDFs
+
+📦 Folder Structure
+src/
+├── components/
+├── pages/
+├── services/
+├── App.tsx
+├── main.tsx
+📬 API
+The app interacts with a backend hosted on Railway at:
+https://cover-letter-generator-backend-production.up.railway.app/
