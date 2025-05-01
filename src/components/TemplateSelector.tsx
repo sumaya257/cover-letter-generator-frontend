@@ -8,7 +8,7 @@ interface Props {
 }
 
 const TemplateSelector = ({ template1, template2, onSelect }: Props) => {
-  const navigate = useNavigate(); // Using useNavigate hook for navigation
+  const navigate = useNavigate(); 
   return (
     <div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
@@ -36,10 +36,10 @@ const TemplateSelector = ({ template1, template2, onSelect }: Props) => {
         </button>
       </div>
     </div>
-    {/* Back Button */}
+    {/* back Button */}
     <div className="flex justify-center mt-6">
         <button
-          onClick={() => navigate(-1)} // Using navigate function to go back
+          onClick={() => navigate(-1)} // navigate function to go back
           className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
         >
           Go Back

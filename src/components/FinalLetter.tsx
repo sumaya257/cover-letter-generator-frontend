@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { jsPDF } from "jspdf";
-import { FiEdit, FiDownload } from "react-icons/fi"; // Importing icons
+import { FiEdit, FiDownload } from "react-icons/fi"; 
 
 interface Props {
   letter: string;
@@ -29,10 +29,10 @@ const FinalLetter = ({ letter }: Props) => {
         Your Final Cover Letter
       </h2>
 
-      {/* Edit & Download icons on the top right */}
+      {/* edit & download icons */}
       <div className="absolute top-4 right-4 flex gap-4">
         <button
-          onClick={() => setIsEditable(!isEditable)} // Toggle edit mode
+          onClick={() => setIsEditable(!isEditable)} // toggle edit mode
           className="bg-yellow-500 text-white p-2 rounded-full hover:bg-yellow-600"
           title="Edit"
         >
@@ -59,11 +59,11 @@ const FinalLetter = ({ letter }: Props) => {
           onChange={(e) => setEditableLetter(e.target.value)}
           className="w-full h-full resize-none text-justify text-gray-800 leading-relaxed outline-none"
           style={{ lineHeight: "1.75" }}
-          readOnly={!isEditable} // Make it editable only if isEditable is true
+          readOnly={!isEditable} // editable only if isEditable is true
         />
       </div>
 
-      {/* Download and Back buttons below */}
+      {/* back button and download */}
       <div className="mt-6 flex gap-4">
         <button
           onClick={handleDownload}
