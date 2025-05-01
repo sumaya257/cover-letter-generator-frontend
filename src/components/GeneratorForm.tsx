@@ -17,7 +17,7 @@ const GeneratorForm = ({ onGenerate }: Props) => {
   const API_URL =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000/generate" // Local URL for development
-      : "https://cover-letter-generator-backend-production.up.railway.app"; // Production URL
+      : "https://cover-letter-generator-backend-production.up.railway.app/generate"; // Production URL
       console.log("Using API URL: ", API_URL);
 
   const handleSubmit = async (e: React.FormEvent) => {
